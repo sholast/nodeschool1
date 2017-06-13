@@ -1,0 +1,19 @@
+{
+  "name": "nodeschool1",
+  "version": "1.0.0",
+  "description": "nodeschool homework 1",
+  "main": "testSingleton.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sholast/nodeschool1.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sholast/nodeschool1/issues"
+  },
+  "homepage": "https://github.com/sholast/nodeschool1#readme"
+}
