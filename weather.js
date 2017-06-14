@@ -2,7 +2,7 @@ const request = require('request');
 const promisify = require("es6-promisify");
 const promisedRequest = promisify(request);
 
-class WeatherRequester {
+module.exports = class WeatherRequester {
     constructor() {}
 
     getWeather(city) {
@@ -18,8 +18,6 @@ class WeatherRequester {
         return this.getWeather('Kyiv')
             .then(result => {
                 kyivWeather = result.body;
-            })
-            .then(() => {
                 return this.getWeather('Kharkov');
             })
             .then(result => {
@@ -41,7 +39,14 @@ class WeatherRequester {
     }
 }
 
+//module.exports.WeatherRequester = WeatherRequester;
+
+/*
 const weather = new WeatherRequester();
 
 weather.getWeatherInSeries().then(result => console.log(result));
 weather.getWeatherInParallel().then(result => console.log(result));
+*/
+
+
+
