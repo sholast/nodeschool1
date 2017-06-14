@@ -1,6 +1,6 @@
-const Singleton = require('./singleton');
+const getInstance = require('./singleton');
 
-let a  = new Singleton();
-let b  = new Singleton();
+let a  = getInstance();
+let b  = getInstance();
 
 console.log(a === b);

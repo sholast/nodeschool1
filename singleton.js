@@ -1,9 +1,17 @@
 let instance;
 
-module.exports = class Singleton {
+class Singleton {
 
     constructor() {
-        !instance && (instance = this);
+        instance = this;
+    }
+
+    getInstance() {
         return instance;
     }
-};
+}
+
+const singleton = new Singleton();
+let getInstance = singleton.getInstance;
+
+module.exports = getInstance;
