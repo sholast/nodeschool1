@@ -1,18 +1,21 @@
 <div>
-    Something
-    <div>{{some}}</div>
-    <div><span>{{other}}</span></div>
+    Person
+    <div>{{firstname}}</div>
+    <div><span>{{lastname}}</span></div>
     text text text
 
+    Children:
     <ul>
-        <li>{{complex.comp1}}</li>
-        <li>{{complex.comp2}}</li>
-        <li>{{complex.comp3}}</li>
+        <li>{{children.daughter}}</li>
+        <li>{{children.son.0}}</li>
+        <li>{{children.son.1}}</li>
     </ul>
 
     <div>
-        asdasd {{another}} sdfdfdsf
-        sdfdsfds dsfsdf
+        <h3>Address:</h3>
+        City: {{address.city}}
+        Streat: {{address.streat}}
+        Building: {{address.building}}
     </div>
 
 
