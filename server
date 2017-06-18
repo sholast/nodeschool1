@@ -16,7 +16,7 @@ const server = http.createServer( (req, res) => {
         firstname: 'Ivan',
         lastname: 'Petrenko',
         children: {daughter: 'Olga', son: ['Petr', 'Sergey']},
-        address: {city: 'Kyiv', streat: 'Ivanova', building: '57'}
+        address: {city: 'Kyiv', street: 'Ivanova', building: '57'}
     };
     const templateEngine = new TemplateEngine('template.html', templateData);
     templateEngine.getStream().pipe(res);
