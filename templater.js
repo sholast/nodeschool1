@@ -41,8 +41,25 @@ class TemplateEngine {
     getStream() {
         return this.readFileStream.pipe(this.templateTransformer);
     }
+}
 
+class Render {
+    constructor() {
+    }
+
+    render(filePath, options, callback) {
+
+        let render = new TemplateEngine(filePath, options).getStream();
+        let rendered = '';
+        render.on('data', (data) => {
+            rendered += data;
+        });
+        render.on('end', () => {
+            return callback(null, rendered);
+        });
+    }
 }
 
 module.exports.TemplateEngine = TemplateEngine;
 module.exports.TemplateTransformer = TemplateTransformer;
+module.exports.render = (new Render).render;
