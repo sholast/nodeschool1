@@ -1,6 +1,8 @@
 const fs = require('fs');
 const Transform = require('stream').Transform;
 
+
+// Transfomer stream
 class TemplateTransformer extends Transform {
     constructor(options) {
         super(options);
@@ -30,6 +32,7 @@ class TemplateTransformer extends Transform {
     }
 }
 
+// Wrapper, that returns stream
 class TemplateEngine {
     constructor(template, templateData) {
         this.readFileStream = fs.createReadStream(template);
@@ -43,6 +46,7 @@ class TemplateEngine {
     }
 }
 
+//Renderer for Express
 class Render {
     constructor() {
     }
